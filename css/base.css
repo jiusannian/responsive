@@ -1,0 +1,141 @@
+*{margin:0;
+padding:0;}
+ul{
+	list-style: none;
+}
+body{ 
+   
+  font-family: 'Microsoft YaHei';
+  background:url(../images/bg.jpg) repeat;
+  padding-top: 30px;
+} 
+.liactive{
+
+	background: #e9c040;
+}
+
+#min{
+	 margin:0 auto 0 auto;
+	 width:90%;
+	}
+	
+#min #min-top{
+	background:url(../images/black.png);
+	width:80%;
+	margin:0px auto 0 auto;
+	
+}
+
+#min #min-top #min-top-in{
+	  margin:0 auto 0 auto;
+	  width:80%;
+	}
+
+#min #min-top #min-top-in{
+	text-align: center;
+	font-size:1.5em;
+	color:white;
+	padding-bottom: 10%;
+}
+#tabl {
+	 width:80%;
+	 margin:20px auto 0 auto;
+	 
+	}
+#tabl	#tabl-in{width:100%;margin:0px auto 0 auto;}
+#tabl table{width:100%;margin:0 auto 0 auto;}
+#tabl table td{padding:2px auto 0 auto;}
+#tabl table input{-webkit-border-radius: 4px;text-indent:4px;width:90%;height:30px;color:gray;border:0px;}
+
+
+ #tabl .td_select{
+	width: 90%;
+	height: 30px;
+
+	-webkit-border-radius: 2px; 
+	border-radius: 2px; 
+	position: relative;
+	background: #fff;
+	
+}
+.td_select .select_normal{
+
+	background: url(../images/select.png) no-repeat ; 
+	
+	width:32px;
+	height: 28px;
+	cursor: pointer; 
+	position: absolute;
+	top:1px;
+	right: 0;
+	
+}
+.text { 
+	height: 30px; 
+	line-height: 30px; 
+	font-size: 16px; 
+	text-indent: 2px;	
+	border:0px;
+	color:#952449;
+}
+.area { width:99%; 
+		border: 1px solid #bababa;
+		 background: #fff; 
+	 	position: absolute; 
+	 	top: 30px; left: 0; 
+	 	display: none; 
+	 	color:gray;
+	}
+.area li { 
+	width:80%; 
+	line-height: 25px; 
+	float: left; 
+	padding-left: 10px; 
+	cursor: pointer; 
+}
+
+#description{
+	resize:none;
+}
+
+#tabl table textarea{-webkit-border-radius: 4px;text-indent:4px;width:100%;height:60px;color:gray;border:0px;}
+#tabl  p{
+	font-family:微软雅黑;
+  color:white;
+  font-size:1.5em;}
+  
+  
+#boot{width:100%;height:50px;margin:20px 0 0 0;/* background:url(deds1.png) repeat-x; */}
+#boot-in{width:100%;margin:0 auto 0 auto;}
+#boot button{cursor:pointer;width:100%;height:45px;border:0px;}
+#boota{width:24.75%;float:left;height: 50px; background:url(../images/deds1.png) repeat-x;margin-right: 0.25%;}
+#bootb{width:49.75%;float:left;height: 50px; background:url(../images/deds1.png) repeat-x;margin-right:0.25%;}
+#bootc{width:25%;float:left;height: 50px; background:url(../images/deds1.png) repeat-x;}
+#boota button{margin:0 auto 0 auto;background:url(../images/des.png)no-repeat; }
+#bootb button{margin:0 auto 0 auto;background:url(../images/ff.png)no-repeat;}
+#bootc button{margin:0 auto 0 auto;background:url(../images/tf.png)no-repeat;}
+
+
+@media screen and (max-width:520px){
+p.gujia{
+	font-family:微软雅黑;
+  color:white;
+  font-size:1em !important;
+}
+input#quanxian,input#come_from, input#come_from,textarea#description,input#name,input#value,input#source,input.beizhu,input#oinput2{
+  	font-size: 0.8em !important;
+} 
+ } 
+
+
+
+ @media screen and (min-width:521px){
+ 	p.gujia{
+	font-family:微软雅黑;
+  color:white;
+  font-size:1.5em !important;
+}
+input#quanxian,input#come_from, input#come_from,textarea#description,input#name,input#value,input#source,input.beizhu,input#oinput2{
+  	font-size: 1.2em !important;
+}
+ } 

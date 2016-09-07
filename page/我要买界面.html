@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+    <!--自适应界面,如果出现,在某些设备出现界面偏小的话,检查一下有没有加入这句 -->
+	<meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+    
+<title>我要买界面</title>
+
+<link rel="stylesheet" href="../css/base3.css" />
+
+<script src="../js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+	
+	window.onload=function(){
+		alert(123);
+		var aUl = document.getElementsByTagName("ul");
+		var oBtn = true;
+		window.onscroll=function(){
+			var viewHeight= document.documentElement.clientHeight;
+			var scrollY = document.documentElement.scrollTop||document.body.scrollTop;
+			
+			for(var i=0;i<aUl.length;i++){
+				var aLi = aUl[i].getElementsByTagName("li");
+				var lastLi = aLi[aLi.length-1];
+
+				if(posTop(lastLi)<viewHeight+scrollY&&oBtn){
+					oBtn = false;
+					var url='data.js';
+					$.ajax({
+						url:url, 
+						cache:false,
+						datatype:'json',
+						success:function(json){
+							json=eval('('+json+')'); //如果是用form的话传过来的是一个字符串，这是将它转化为一个对象
+							console.info(typeof(json));
+							//console.info(json);
+							alert(json.list);
+
+							if(json.code){
+								oBtn = true;
+							}
+							for(var i=0;i<json.list.length;i++){
+								var list = json.list[i];
+								for(var j=0;j<list.src.length;j++){
+									var oLi = document.createElement("li");
+									oLi.innerHTML = '<img src="'+list.src[j]+'" /><p>'+list.title[j]+'</p>';
+									aUl[i].appendChild(oLi);
+								}
+
+							}
+						}
+					});
+				}
+					
+			}
+
+		}
+
+	}
+	function posTop(obj){
+		var top = 0;
+
+		while(obj){
+			top +=obj.offsetTop;
+			obj = obj.offsetPartent;
+		}
+		return top;
+	}
+
+	</script>
+</head>
+	
+<body>
+<div data-role="header">
+
+
+
+</div>
+<div class="content">
+	<div class="search_bg">
+     <div class="search_all">
+
+        <input class="search" placeholder="点此搜索藏品" />
+        <button><img src="../images/search_button.png"/></button>
+     </div>
+	</div>
+
+	<div class="last">
+		<div class="last_bg">
+		
+			<div class="bg_l"><button></button></div>
+			<div class="bg_m"><button></button></div>
+			<div class="bg_r"><button></button></div>
+
+		</div>
+	     <div id="div1">
+	     	
+			<ul class="ul_1">
+				<li>
+					<div class="li_bg"></div>
+					<p class="li_p">商品名称1</p>
+					<img src="../images/1.jpg">
+					
+				</li>
+				<li>
+					<div class="li_bg"></div>
+					<p class="li_p">商品名称1</p>
+					<img src="../images/2.jpg">
+					
+				</li>
+				<li>
+					<div class="li_bg"></div>
+					<p class="li_p">商品名称1</p>
+					<img src="../images/3.jpg">
+					
+				</li>
+				<li>
+					<div class="li_bg"></div>
+					<p class="li_p">商品名称1</p>
+					<img src="../images/7.jpg">
+					
+				</li>
+			</ul>
+
+			<ul class="ul_2">
+				<li>
+					<div class="li_bg"></div>
+					<p class="li_p">商品名称1</p>
+					<img src="../images/5.jpg">
+					
+				</li>
+				<li>
+					<div class="li_bg"></div>
+					<p class="li_p">商品名称1</p>
+					<img src="../images/6.jpg">
+					
+				</li>
+				<li>
+					<div class="li_bg"></div>
+					<p class="li_p">商品名称1</p>
+					<img src="../images/4.jpg">
+					
+				</li>
+				<li>
+					<div class="li_bg"></div>
+					<p class="li_p">商品名称1</p>
+					<img src="../images/8.jpg">
+					
+				</li>
+			</ul>
+			
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+<div data-role="footer">
+</div>
+</body>
+</html>

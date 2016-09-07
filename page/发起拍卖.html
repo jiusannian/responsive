@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+    <!--自适应界面,如果出现,在某些设备出现界面偏小的话,检查一下有没有加入这句 -->
+	<meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+    
+<title>发起拍卖</title>
+
+<link rel="stylesheet" href="../css/base8.css" />
+
+<script src="../js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+	//区块名称
+	function liuxiaofan(){
+		var li=$(".div2");
+    	var h_left = 0;
+   		var h_right = 0;//记录区块高度的数组
+   		var i = 0;
+    	for(var i = 0;i < li.length;i++) {
+    		if(h_left > h_right){
+    			//alert("h_left>h_right");
+    			h_right += li[i].offsetHeight;
+    			li.eq(i).css("float","right");
+    		}
+    		else{
+    			//alert(h_right+'    '+h_left);
+    			//alert("h_left<h_right");
+    			h_left += li[i].offsetHeight;
+    			
+    			li.eq(i).css("float","left");
+    		}
+    	}
+	}
+	window.onload=function(){
+		liuxiaofan();
+		//alert(123);
+		var aUl = $(".div2");
+		var oBtn = true;
+		window.onscroll=function(){
+			//alert(123);
+			var viewHeight= document.documentElement.clientHeight;
+			var scrollY = document.documentElement.scrollTop||document.body.scrollTop;
+			/*
+			for(var i=0;i<aUl.length;i++){
+				//var aLi = aUl[i].getElementsByTagName("li");
+				var lastLi = aLi[aUl.length-1];
+
+				if(posTop(lastLi)<viewHeight+scrollY&&oBtn){
+					oBtn = false;*/
+					var url='data.js';//console.info(123);
+					$.ajax({
+
+						url:url, 
+						cache:false,
+						datatype:'json',
+						success:function(json){
+							json=eval('('+json+')'); //如果是用form的话传过来的是一个字符串，这是将它转化为一个对象
+							console.info(typeof(json));
+							//console.info(json);
+							alert(json.list);
+
+							/*if(json.code){
+								oBtn = true;
+							}
+							for(var i=0;i<json.list.length;i++){
+								var list = json.list[i];
+								for(var j=0;j<list.src.length;j++){
+									var oDiv = document.createElement("div");
+									oDiv.innerHTML ='<div class="li_bg"></div><p class="li_p">'+list.title[j]+
+									'</p><img src="'+list.src[j]+'" />';
+									aUl[i].appendChild(oDiv);
+								}
+
+							}*/
+						}
+					});
+				/*}
+					
+			}*/
+
+		}
+
+	}
+	function posTop(obj){
+		var top = 0;
+
+		while(obj){
+			top +=obj.offsetTop;
+			obj = obj.offsetPartent;
+		}
+		return top;
+	}
+	
+	</script>
+</head>
+	
+<body>
+<div data-role="header">
+
+
+
+</div>
+<div class="content">
+	<div class="search_bg">
+     <div class="search_all">
+
+        <input class="search" placeholder="点此搜索藏品" />
+        <button><img src="../images/search_button.png"/></button>
+     </div>
+	</div>
+
+	<div class="last">
+		<div class="last_bg">
+		
+			<div class="bg_l"><button></button></div>
+			<div class="bg_m"><button></button></div>
+			<div class="bg_r"><button></button></div>
+
+		</div>
+     <div id="div1">
+			<div class='div2'>
+					<div class="li_all_bg">
+						<div class="gou_bg1"></div>
+						<div class="gou_bg2">
+							<div class="bg2_l"></div>
+							<div class="bg2_m"><img src="../images/gou.png" /></div>
+							<div class="bg2_r"></div>
+						</div>
+						<div class="gou_bg3"></div>
+						
+					</div>
+				<div class="li_bg"></div>
+				<p class="li_p">商品名称1</p>
+				<img src="../images/1.jpg">
+				
+			</div>
+			<div class='div2'>
+			<div class="li_all_bg">
+						<div class="gou_bg1"></div>
+						<div class="gou_bg2">
+							<div class="bg2_l"></div>
+							<div class="bg2_m"><img src="../images/gou.png" /></div>
+							<div class="bg2_r"></div>
+						</div>
+						<div class="gou_bg3"></div>
+						
+					</div>
+				<div class="li_bg"></div>
+				<p class="li_p">商品名称1</p>
+				<img src="../images/2.jpg">
+				
+			</div>
+			<div class='div2'>
+			<div class="li_all_bg">
+						<div class="gou_bg1"></div>
+						<div class="gou_bg2">
+							<div class="bg2_l"></div>
+							<div class="bg2_m"><img src="../images/gou.png" /></div>
+							<div class="bg2_r"></div>
+						</div>
+						<div class="gou_bg3"></div>
+						
+					</div>
+				<div class="li_bg"></div>
+				<p class="li_p">商品名称1</p>
+				<img src="../images/3.jpg">
+				
+			</div>
+			<div class='div2'>
+			<div class="li_all_bg">
+						<div class="gou_bg1"></div>
+						<div class="gou_bg2">
+							<div class="bg2_l"></div>
+							<div class="bg2_m"><img src="../images/gou.png" /></div>
+							<div class="bg2_r"></div>
+						</div>
+						<div class="gou_bg3"></div>
+						
+					</div>
+				<div class="li_bg"></div>
+				<p class="li_p">商品名称1</p>
+				<img src="../images/7.jpg">
+				
+			</div>
+			<div class='div2'>
+			<div class="li_all_bg">
+						<div class="gou_bg1"></div>
+						<div class="gou_bg2">
+							<div class="bg2_l"></div>
+							<div class="bg2_m"><img src="../images/gou.png" /></div>
+							<div class="bg2_r"></div>
+						</div>
+						<div class="gou_bg3"></div>
+						
+					</div>
+				<div class="li_bg"></div>
+				<p class="li_p">商品名称1</p>
+				<img src="../images/7.jpg">
+				
+			</div>
+	</div>
+	</div>
+</div>
+
+<div data-role="footer">
+</div>
+<script type="text/javascript">
+	
+
+</script>
+</body>
+</html>

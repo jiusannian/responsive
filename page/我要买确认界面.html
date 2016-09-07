@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+    <!--自适应界面,如果出现,在某些设备出现界面偏小的话,检查一下有没有加入这句 -->
+	<meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+    
+<title>我要买确认界面</title>
+
+<link rel="stylesheet" href="../css/base2.css" />
+
+<script src="../js/jquery-1.9.1.min.js"></script>
+<script src="../js/slide.js"></script>
+</head>
+	
+<body>
+<div data-role="header">
+</div>
+<div class="content">
+     <div class="top">
+        <div class="top_monment">
+        	<div class="top_back" id="back"><img src="../images/back.png" /></div>
+            <div class="top_banner" >
+                <img />
+                <img  class="none" />
+                <img  class="none"/>
+            </div>
+            <div class="top_forward" id="forward"><img src="../images/forward.png"/></div>
+        </div>
+        <div class="dot">
+            <div class="top_swith">
+                <span class="top_dot active"></span>
+                <span class="top_dot "></span>
+                <span class="top_dot no_margin"></span>
+            </div>  
+        </div>
+
+   	</div>
+        <div class="collection ">
+            <p class="name">商品名</p>
+			<p class="price">价格:<span>xxxxx</span></p>
+            <div class="collectionall">
+                <ul class="collection_more">
+                    <li><p>称呼:</p><input placeholder="请输入您的称呼"placeholder="请输入您的称呼"/></li>
+                    <li><p>联系电话:</p><input placeholder="请输入您的联系电话"/></li>
+                    <li><p>联系QQ:</p><input placeholder="请输入您的联系QQ"/></li>
+                    <li><p>联系邮箱:</p><input placeholder="请输入您的联系邮箱"/></li>
+                </ul>
+
+
+				
+            </div>
+        </div>
+
+        <div class="last_submit">
+          <div class="queren"><button><img src="../images/querentijiao.png"/></button></div>
+         
+        </div>  
+    	
+</div>
+<div data-role="footer">
+</div>
+</body>
+<script type="text/javascript">
+$(function(){
+    
+    //切换
+    var num=3;                     //图片个数
+    var path="../images/banner";   //图片路径
+    for (var i = 1; i<=num; i++) {
+        //alert(i);
+        var src=$(".top_banner img");
+        //$(src[i-1]).attr("src",path+i+".jpg");
+        src.eq(i-1).attr("src",path+i+".jpg");
+    };
+    
+    $("#back img").click(function(){
+        back(num);
+    });
+    $("#forward img").click(function(){
+        forward(num);
+    });
+
+
+    //提交
+    $(".queren").click(function(){
+        var list = $(".collection_more li input");
+        for (var i = 0; i<list.length; i++) {
+            //console.info($(list[i]).val());
+            console.info(list.eq(i).val()); 
+        };
+
+    });
+    
+    
+    //商品名
+    console.info($(".name").html());
+
+
+    //价格
+    console.info($(".price span").html());
+
+});
+</script>
+</html>

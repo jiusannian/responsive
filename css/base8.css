@@ -1,0 +1,247 @@
+*{margin:0;
+padding:0;}
+html{font-size:62.5%; /* 10÷16=62.5% */} 
+body{font-size:16px;font-size:1.6rem ; /* 12÷10=1.2 */} 
+
+body{  
+  font: normal 100% Helvetica, Arial, sans-serif;
+  background:url(../images/bg.jpg) repeat;
+  padding-top: 30px;
+} 
+.search_all{
+	width: 90%;
+	margin:8px auto 0 auto;
+	height: auto;
+	overflow:hidden;
+	
+
+
+
+}
+.search_bg{
+	width: 100%;
+	height: auto;
+	background: url(../images/cpmc_2.png) repeat-x;
+	padding-top: 1px;
+	margin-bottom: 10px;
+}
+
+.search{
+	width:65%;
+	height:35px;
+	border:none;
+	
+	text-indent:24px;
+	box-shadow:0 1px 1px 2px #666 inset;
+	border-radius:12px;
+	-webkit-border-radius:12px;
+	-moz-border-radius:12px;
+	background-image:  url(../images/search.png) ;
+	background-repeat: no-repeat;
+	background-position: 10px 10px;
+	padding-left: 10px;
+	margin-bottom: 10px;
+}
+
+
+
+
+
+.search_all button{
+	float: right;
+	width:25%;
+	height:35px;
+
+	margin-right:1%;
+	box-shadow:2px 2px 2px 1px #1C1C1C;
+	border-radius:8px 8px 8px 8px;
+	-webkit-border-radius:8px 8px 8px 8px;
+	-moz-border-radius:8px 8px 8px 8px;
+	background: #dfb538;
+	
+
+}
+.search_all button img{
+	width: 60px;
+	height: auto;
+}
+
+li{list-style: none;}
+#div1{
+	width:90%;
+	height: auto;
+	margin:0 auto;
+	overflow: hidden;
+	position: relative;
+}
+/* #div1 .div1_bg{
+	width: 100%;
+	height: 50px;
+	background: #000;
+	position: absolute;
+} */
+.last{
+	width: 100%;
+	height: auto;
+	position: relative;
+	
+
+
+}
+.last_bg{
+	width: 100%;
+	height: 50px;
+	background: #ccc;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	margin: 0 auto;
+	z-index: 10000;
+	opacity: 0.8;
+	filter:alpha(opacity=80); 
+}
+.last_bg button{cursor:pointer;width:100%;height:45px;border:0px; }
+.bg_l{width:20%;
+	float:left;
+	height: 50px; 
+	background:url(../images/deds1.png) repeat-x;
+	margin-right: 0.25%;
+}
+.bg_m{width:59.5%;
+	float:left;
+	height: 50px; 
+	background:url(../images/deds1.png) repeat-x;
+	margin-right:0.25%;
+}
+.bg_r{width:20%;
+	float:left;
+	height: 50px; 
+	background:url(../images/deds1.png) repeat-x;
+
+}
+.last_bg button{cursor:pointer;width:100%;height:45px;border:0px; }
+.bg_l button{
+
+	margin:0 auto 0 auto;
+	background:url(../images/des.png) no-repeat; 
+	background-position: 50% 5px;
+	
+
+}
+.bg_m button{margin:0 auto 0 auto;
+	background:url(../images/paimai.png) no-repeat;
+	background-position: 50% 5px;
+}
+.bg_r button{margin:0 auto 0 auto;
+	background:url(../images/tf.png) no-repeat;
+	background-position: 50% 5px;
+} 
+#div1 p{
+	color: #fff;
+	font-weight: 600;
+	font-size: 1.5em;
+}
+.ul_1{
+	float: left;
+}
+.ul_2{
+	float: right;
+}
+.div2{
+ 	width: 48%;
+ 	height: auto;
+	position: relative;
+	margin-bottom: 5px;
+
+}
+.div2 .li_bg{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height:30px;
+	z-index: 10;
+	opacity: 0.4;
+	filter:alpha(opacity=40);
+	background: #000;
+} 
+.div2 .li_p{
+	width: 100%;
+	height: auto;
+	position: absolute;
+	top: 2px;
+	text-align: center;
+	font-size: 18px;
+	font-weight: 800;
+	color:#fff;
+	z-index: 11;
+}
+img{
+	width:100%;
+	height: auto;
+	
+	z-index: 1;
+}
+
+
+.li_all_bg{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 18;
+
+	opacity: 0.8;
+
+filter:alpha(opacity=80);
+}
+.gou_bg1{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 33%;
+	background: #000;
+	opacity: 0.7;
+
+filter:alpha(opacity=70);
+}
+.gou_bg2{
+	position: absolute;
+	top: 33%;
+	left: 0;
+	width: 100%;
+	height: 67%;
+		overflow: hidden;
+}
+.bg2_l{
+	width: 25%;
+	height: 100%;
+
+	float: left;
+	background: #000;
+	opacity: 0.7;
+
+filter:alpha(opacity=70);
+}
+.bg2_m{
+	width: 50%;
+	height: 100%;
+	float: left;
+
+}
+.bg2_m img{
+	width: 100%;
+	float: left;
+
+}
+.bg2_r{
+	width: 25%;
+	height: 100%;
+	float: left;
+	background: #000;
+	opacity: 0.7;
+
+filter:alpha(opacity=70);
+}
